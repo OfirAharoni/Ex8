@@ -1,0 +1,15 @@
+As a client, at the first time you got a token. You have 2 options:
+a. save the token locally (for example in a file or in SP)
+b. use this token only in this current app-launch, and re-request a token from the server each time the app launches again.
+
+implementation a:
+
+*pro: when we save the token locally, we avoid asking it from the server every time, which is an expensive request 
+The user is waiting and asking the server and waiting for the answer takes time.
+*con: if we save the user token for reuse we are risking our users, because someone might get access to this token
+and can use our user information.
+
+implamantation b:
+
+*pro: less risk for stealing our user information since we do not save the token.
+*cons: expensive request each time, makes the user wait to get the requested information.
